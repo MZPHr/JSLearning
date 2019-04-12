@@ -1,2 +1,2 @@
 # JSLearning
-我在学习JSdom编程!
+我在学习JavaScriptDom编程!
