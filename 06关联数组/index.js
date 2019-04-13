@@ -2,7 +2,7 @@
 var nums = [1, 2, 3];
 //这种数组默认使用的是数字下标，所以不能成为关联数组
 //关联数组，使用字符串作为下标
-var m_array = Array();      //用Array()对象定义的数组能成为关联数组
+var m_array = new Array();      //用Array()对象定义的数组能成为关联数组
 m_array["no1"] = 1;
 m_array["no2"] = 2;
 m_array["no3"] = 3;

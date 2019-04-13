@@ -1,6 +1,6 @@
 /*对象*/
 //声明和赋值
-var nums = Object();
+var nums = new Object();
 nums.one = 1;       //用‘.’符号赋值,one是属性名，1是one的属性值
 nums.two = 2;
 nums.three = 3;

@@ -10,7 +10,7 @@ alert(str);                 //输出"HelloWorld!"
 str1 = "Hi";
 result = str1 + num1;
 alert(result);              //输出"Hi10",是一个字符串，这是因为JS是弱类型语言，字符串+数字，的数字类型会被转化成字符串类型
-//数字+字符串会怎么样？
+//数字+字符串数字会怎么样？
 num1 = 1, word = "10";
 result = num1 + word;
 alert(result);              //输出11，字符串类型被转换成数字类型

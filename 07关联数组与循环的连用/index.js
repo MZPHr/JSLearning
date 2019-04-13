@@ -1,4 +1,4 @@
-var m_array = Array();
+var m_array = new Array();
 var i;
 for (i = 0; i < 4; i++) {
     m_array["no" + i] = i;
