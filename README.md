@@ -1,6 +1,7 @@
 # JSLearning
 我在学习JavaScriptDom编程!
-
+#重要信息已用*标记
+<hr>
 01~02
 --调用方法
 <hr>
