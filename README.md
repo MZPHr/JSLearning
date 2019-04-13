@@ -30,14 +30,14 @@
 029~030--数组与循环的联用
 <hr>
 031--<em><strong>二维数组与循环的联用*</strong></em>
-<br>
+<hr>
 032~033--函数
-<br>
+<hr>
 034--<em><strong>全局变脸*</strong></em>
-<br>
+<hr>
 035--<em><strong>局部变量 *</strong></em>
-<br>
+<hr>
 036--<em><strong>实际参数和形式参数*</strong></em>
-<br>
+<hr>
 037~038--对象扩展
-<br>
+<hr>
