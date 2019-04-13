@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>TEST</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1 class = "he1 important">Veritas</h1>    <!--用空格进行分隔，以指定多个类名-->
+        <p class = "para1">Para1</p>
+        <ul id = "list">
+            <li class = "sale">我有sale类名</li>
+            <li class = "sale">我有sale类名</li>
+            <li>我有sale类名</li>
+        </ul>
+        <script>
+        //3.getELementsByClassName   通过类名（class）来获取符合类名的元素，返回数组
+            var items = document.getElementsByClassName("para1");
+            alert(items.length);        //输出1
+            var new_items = document.getElementsByClassName("important he1");       //检索同时具有he1heimportant类名的元素，部分前后次序，也可以把这个参数写成"he1 important"，输出为1，是那个h1标签。
+            //即使那个h1标签具有更多的类名也没关系，只要有important和he1就行了
+            //getELementsByClassName和getElementById联用
+            //检索list下有多少个元素拥有类名sale
+            var shopping = document.getElementById("list");
+            var sales = shopping.getElementsByClassName("sale");
+            alert(sales.length);
+        </script>
+    </body>
+</html>

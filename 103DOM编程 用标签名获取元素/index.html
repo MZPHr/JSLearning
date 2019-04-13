@@ -1,0 +1,27 @@
+<html>
+        <head>
+            <title>TEST</title>
+        </head>
+        <body>
+            <p id = "myid">Para</p>
+            <ul id = "list">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </body>
+        <script>
+            //2.getElementsByTagName(str_标签名) 通过特定标签名获取符合相应标签名的元素，返回数组
+            alert(document.getElementsByTagName("li").length);
+            //可以使用通配符"*"获取所有元素的数目
+            alert(document.getElementsByTagName("*").length);
+            //来验证一下，数组的每一个元素是否都是对象
+            for(var i = 0; i < document.getElementsByTagName("li"); i++){
+                alert(typeof document.getElementsByTagName("li")[i]);       //输出为object，所以每一个元素都是对象
+            }
+            //即使一种标签名只有一个符合的标签，也返回数组，只不过是长度为1的数组
+            //增强代码可读性，把这个方法赋值给一个变量
+            var items = document.getElementsByTagName("li");
+            alert("有" + items.length + "个<li>标签");
+        </script>
+    </html>

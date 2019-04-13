@@ -43,3 +43,7 @@
 <hr>
 100~101--<em><strong>DOM简介以及CSS的id，class选择器*</strong></em>
 <hr>
+102~105--<em><strong>DOM编程 使用获取元素的函数*</strong></em>
+<hr>
+106--<em><strong>DOM编程 自制getElementsByClassName函数*</strong></em>
+<hr>

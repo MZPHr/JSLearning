@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>TEST</title>
+    </head>
+    <body>
+        <ul id = "like">
+            <li class = "sale">li1</li>
+            <li class = "sale">li2</li>
+            <li class = "no">li3</li>
+        </ul>
+        <ul id = "no">
+            <li class = "sale">li4</li>
+        </ul>
+        <script>
+        //getElementsByClassName只有新浏览器才支持，所以我们要制作一个适用于就浏览器的函数
+        function getElementsByClassName(node, classname){       //node 指定范围，classname就是要检索的类名，当前只支持检索一个类名
+            //如果浏览器支持（document对象是宿主对象，在浏览器里，而getElementsByClassName方法是属于document的，所以若想知道这个方法在这个浏览器内是否能够使用，只需要确定这个方法是否存在（即被定义））就使用原有的方法
+            if(node.getElementsByClassName){                            //若getElementsByClassName存在
+                return node.getElementsByClassName(classname);          //则使用原有方法
+            }else{                                                      //否则
+                var results = new Array();                              //定义一个数组（因为getElementsByClassName返回一个数组），用来盛放检索到的符合条件的一组元素
+                var elems = node.getElementsByTagName("*");             //用一个变量存储node（检索范围）里的所有元素
+                for(var i = 0; i < elems.length; i++){                  //遍历node里所有的元素
+                    if(elems[i].classname.indexOf(classname) != -1)     //用当前下标的元素的类名进行字符串检索，若检索的字符串存在,（在这里indexOf的作用是字符串检索，它返回的值如果是-1的话，就证明没有检索到符合的字符串，故!= -1就是检索到相符的字符串的意思）
+                        results[results.length] = elems[i];             //则把当前下标的元素添加到results数组内,这里使用数组的长度作为下标，故而随着元素的添加，下标也在变化，且length的值是从0开始的，正好和数组下标相对应
+                }
+            }
+            return results;                                             //返回results数组
+        }
+        //定义完成，现在看看好不好用
+        var shopping = document.getElementById("like");
+        var items = getElementsByClassName(shopping, "sale");
+        alert(items.length);            //输出为2，可以正常使用
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>TEST</title>
+    </head>
+    <body>
+        <p id = "myid">Para</p>
+        <ul id = "list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </body>
+    <script>
+        //把getElementById和getElementsByTagName结合起来使用
+        //前几个项目102,103,都是用document对象调用方法的，要想知道id属性值为list的元素包含多少个元素，就需要更具体的对象
+        //首先获取id为list的元素,存储在一个变量里
+        var shopping = document.getElementById("list");
+        //接下来把在shopping的范围内检索任意标签名的元素,并赋值给items变量
+        var items = shopping.getElementsByTagName("*");
+        alert(items.length);        //输出数组长度
+        for(var i = 0; i < items.length; i++){
+            alert(typeof items[i]);
+        }
+    </script>
+</html>
