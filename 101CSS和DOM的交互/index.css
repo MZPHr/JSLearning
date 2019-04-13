@@ -1,0 +1,26 @@
+/* css语句的格式：
+    元素名{
+    css代码
+} */
+/* 继承：节点树上各个元素将继承父元素的样式 ，如：*/
+body{                             /* 给body标签添加样式，body标签所有的子元素都会继承样式（即子元素的样式和body的样式相同） */
+    color:white;                /* 白色字体 */
+    background-color:black;     /* 黑色背景 */
+}
+/*通过class（类名）添加样式*/
+.sale{
+    color:red;                  /* 给所有有sale类名的元素添加红字体的样式 */
+}
+p.sale{
+    background-color:blue;      /* 针对有sale类名的p标签，添加蓝色背景的样式 */
+}
+.important{
+    background-color:greenyellow;
+}
+/* 也可以通过id来修改样式 */
+#list{                            /* 拥有list id的所有元素都是灰色字体 */
+    color:gray;                 /* id本身可以在css选择器中很多次，css可以利用id特定元素样式 */
+}
+p#myid{                          /* 只有拥有id为myid 的 p元素才能获得紫色字体*/
+    color:blueviolet;
+}
