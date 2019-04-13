@@ -41,3 +41,5 @@
 <hr>
 037~038--对象扩展
 <hr>
+100~101--<em><strong>DOM简介以及CSS的id，class选择器*</strong></em>
+<hr>
