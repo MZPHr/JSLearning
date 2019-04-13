@@ -12,3 +12,6 @@ var num = 2;
 alert(num % 2);     //2除2，商1余0，所以输出0
 num %= 2;           //等价于num = num % 2;
 alert(num)          //输出0
+//** 幂
+var my_num = 2;
+alert(my_num ** 2);     //输出4
