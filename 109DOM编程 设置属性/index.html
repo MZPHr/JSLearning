@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>TEST</title>
+    </head>
+    <body>
+        <p id = "para" title = "mypara">para1</p>
+        <script>
+            //设置属性
+            //setAttribute(str_属性名, str_属性值),只作用于元素节点，不是document对象的方法,有两个参数，分别是要设置的属性名和属性的值
+            //获取id为para的元素
+            var items = document.getElementById("para");
+            //查看设置属性前的title属性值
+            alert("属性为 " + items.getAttribute("title"));
+            //把id为para的元素的title属性修改为newpara
+            items.setAttribute("title", "newpara");
+            //查看修改之后的title属性值
+            alert("属性为 " + items.getAttribute("title"));
+            //若是在设置属性前，元素没有title属性，那么获取属性之后输出null，若元素原本没有title属性，然后使用setAttribute函数给它设置属性，那么事实上这个函数完成了两项操作，先创建title属性，然后改变它的值，若元素有title值，那么函数直接修改title值
+            //通过这个函数改变的title值，在浏览器的查看源里看到的仍然是改变前的title值，这源自于DOM的工作模式，先加载静态内容，再动态刷新，动态刷新不影响文档的静态内容，所以DOM对页面内容进行刷新并不需要在浏览器里刷新页面
+        </script>
+    </body>
+</html>

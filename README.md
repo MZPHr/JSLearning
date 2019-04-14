@@ -41,9 +41,17 @@
 <hr>
 037~038--对象扩展
 <hr>
+//进入了DOM编程，编号改为1开头
+<br>
 100~101--<em><strong>DOM简介以及CSS的id，class选择器*</strong></em>
 <hr>
 102~105--<em><strong>DOM编程 使用获取元素的函数*</strong></em>
 <hr>
 106--<em><strong>DOM编程 自制getElementsByClassName函数*</strong></em>
 <hr>
+107~109--<em><strong>DOM编程 获取和设置属性*</strong></em>
+<hr>
+//进入项目案例练习，编号改为2开头
+<br>
+#制作JavaScript图片库#
+<br>
