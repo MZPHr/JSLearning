@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Image Gallery</title>
+    </head>
+    <body>
+        <h1>图片库</h1>
+        <!--
+        需要一个事件来触发showPic()函数，来调用它
+        事件处理函数：在特定事件发生时调用特定的JS代码
+        如：在鼠标悬停在某个元素上时触发一个事件，需要使用onmouseover函数，如果在鼠标离开时触发，那么就用onmouseout函数
+        我们要在用户点击链接时触发事件，所以使用onclick函数
+        别忘了我们的showPic函数是有一个参数的，whicpic参数,我们要把点击的链接本身用作whicpic参数（也就是点击的元素节点当做参数），因为我们在定义showPic函数时，使用了whicpic.getAttribute("href"),也就是说从whicpic这个对象中获取href属性值，
+        而whicpic就是我们点击的链接，所以只需要把当前点击的元素作为参数传递给whicpic就可以了
+        这里使用到了this关键字（this关键字的意思是：这个对象）
+        onclick = "showPic(this)";      //放在双引号之间的是JS语句，多条语句之间用分号隔开
+        由于我们要在点击链接时触发onclick，所以我们要把onclick放在链接（即a标签）里
+        所以a标签变成了这样
+        <a href="images/1.jpg" title = "pic1" onclick = "showPic(this);">Picture_1</a>
+        但是，我们还要阻止浏览器的默认行为（即在当前标签页直接打开图片）
+        事件处理函数的工作机制：再给某个元素添加了事件处理函数后，一旦事件发生，相应的JS代码就会执行，被调用的JS代码可以返回一个值，这个值传递给事件处理函数
+        如：给某个链接添加onclick，并让这个函数所触发的JS代码返回true和false，
+        这样一来，当这个链接被点击时，如果那段JS代码返回true，onclick函数就认为这个链接被点击了，
+        反之，就认为这个链接没被点击，一旦认为没被点击，浏览器也就不会触发链接被点击时的默认行为,
+        所以只需让返回值为false就可以了
+        我们需要另外一个JS语句：return flase;
+        于是a标签变成了这样
+        <a href="images/1.jpg" title = "pic1" onclick = "showPic(this); return false;">Picture_1</a>
+        -->
+        <ul>
+            <li>
+                <a href="images/1.jpg" onclick = "showPic(this); return false;" title = "pic1">Picture_1</a>
+            </li>
+            <li>
+                <a href="images/2.jpg" onclick = "showPic(this); return false;" title = "pic2">Picture_2</a>
+            </li>
+            <li>
+                <a href="images/3.jpg" onclick = "showPic(this); return false;" title = "pic3">Picture_3</a>    
+            </li>
+            <li>
+                <a href="images/4.jpg" onclick = "showPic(this); return false;" title = "pic4">Picture_4</a>
+            </li>
+            <img id = "picture" src="images/picture.jpg" alt="my image gallery">
+        </ul>
+        <script src = "js/showPic.js"></script>
+    </body>
+</html>

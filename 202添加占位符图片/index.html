@@ -19,7 +19,13 @@
             <li>
                 <a href="images/4.jpg" title = "pic4">Picture_4</a>
             </li>
-            <!--点击链接，就可以在浏览器中查看对应的图片，但是若想返回主页还需要点击浏览器的BACK按钮-->
+            <!-- 当点击某个链接时，能在网页上看到图片
+            1.添加一个“占位符”图片在这个网页上预留一个浏览区域
+            2.点击某个链接时，拦截网页默认行为（即在当前标签页直接打开图片）
+            3.在点击某个链接时，把“占位符”图片替换为那个链接指定的图片
+            -->
+            <img id = "picture" src="images/picture.jpg" alt="my image gallery"><!-- 选用一个图片作为“占位符” -->
         </ul>
+        <script src = "js/showPic.js"></script>
     </body>
 </html>
