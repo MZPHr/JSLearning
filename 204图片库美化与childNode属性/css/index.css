@@ -1,0 +1,10 @@
+body{
+    background-color: gray;
+}
+img {
+    color: gray;
+}
+li{
+    border-left: 4px blue solid;
+    color: blue;
+}

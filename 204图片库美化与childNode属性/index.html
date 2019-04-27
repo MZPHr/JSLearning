@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Image Gallery</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <h1>图片库</h1>
+        <ul>
+            <li>
+                <a href="images/1.jpg" onclick = "showPic(this); return false;" title = "pic1">Picture_1</a>
+            </li>
+            <li>
+                <a href="images/2.jpg" onclick = "showPic(this); return false;" title = "pic2">Picture_2</a>
+            </li>
+            <li>
+                <a href="images/3.jpg" onclick = "showPic(this); return false;" title = "pic3">Picture_3</a>    
+            </li>
+            <li>
+                <a href="images/4.jpg" onclick = "showPic(this); return false;" title = "pic4">Picture_4</a>
+            </li>
+            <img id = "picture" src="" alt="my image gallery">  <!--不添加src属性，图片只会显示alt里的字符串,这样占位符图片就不会被用户点到了，然后通过css修改这个alt属性的字体（直接修改img元素的字体颜色）来隐藏alt的字符串-->
+        </ul>
+        <script src = "js/showPic.js"></script>
+    </body>
+</html>
