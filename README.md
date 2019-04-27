@@ -54,7 +54,7 @@
 //进入项目案例练习，编号改为2开头
 <br>
 #制作JavaScript图片库#
-<br>
+<hr>
 201~203--<em><strong>图片库雏形*</strong></em>
 <hr>
 203~206--<em><strong>图片库扩展*</strong></em>
