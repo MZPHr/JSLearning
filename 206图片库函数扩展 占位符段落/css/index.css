@@ -1,10 +1,30 @@
 body{
-    background-color: gray;
+    background-color: rgb(37, 36, 36);
 }
-img {
-    color: gray;
+h1{
+    color: #cccccc;
 }
 li{
-    border-left: 4px blue solid;
-    color: blue;
+    float: left;
+    padding: 5px;
+    list-style: none;
+    color: rgb(245, 235, 235);
+    border: 3px rgb(245, 235, 235) solid;
+}
+img{
+    display: block;
+    clear: both;
+    color: rgb(37, 36, 36);
+}
+ul{
+    padding: 0;
+}
+#description{
+    color: #cccccc;
+}
+a{
+    color: #cc6600;
+    background-color: transparent;
+    font-weight: bold;
+    text-decoration: none;
 }

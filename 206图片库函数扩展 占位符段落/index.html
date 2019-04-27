@@ -9,19 +9,21 @@
         <h1>图片库</h1>
         <ul>
             <li>
-                <a href="images/1.jpg" onclick = "showPic(this); return false;" title = "pic1">Picture_1</a>
+                <a href="images/1.jpg" onclick = "showPic(this); return false;" title = "pic1" >Picture_1</a>
             </li>
             <li>
-                <a href="images/2.jpg" onclick = "showPic(this); return false;" title = "pic2">Picture_2</a>
+                <a href="images/2.jpg" onclick = "showPic(this); return false;" title = "pic2" >Picture_2</a>
             </li>
             <li>
-                <a href="images/3.jpg" onclick = "showPic(this); return false;" title = "pic3">Picture_3</a>    
+                <a href="images/3.jpg" onclick = "showPic(this); return false;" title = "pic3" >Picture_3</a>    
             </li>
             <li>
-                <a href="images/4.jpg" onclick = "showPic(this); return false;" title = "pic4">Picture_4</a>
+                <a href="images/4.jpg" onclick = "showPic(this); return false;" title = "pic4" >Picture_4</a>
             </li>
-            <img id = "picture" src="" alt="my image gallery">
         </ul>
+        <img id = "picture" src="" alt="my image gallery">
+        <!--为了让点击图片链接时显示对应图片的title以进行图片描述，所以在img元素下添加一个"占位符段落"-->
+        <p id = "description">Choose an image (0__ 0 !)</p>
         <script src = "js/showPic.js"></script>
     </body>
 </html>
