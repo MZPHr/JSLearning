@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>TEST</title>
+    </head>
+    <body>
+        <!--"javascript:"伪协议,可以让我们通过连接来调用js函数-->
+        <a href = "javascript:popUp('http://www.example.com/');">Example</a>
+        <!--在支持js伪协议的浏览器上可以运行，但是支持这种伪协议却禁用js的依然不能调用这个函数(不能使用js解释器)
+        使用js伪协议是下下策
+        -->
+        <!--方法2，使用事件处理函数-->
+        <a href = "#" onclick = "popUp('http://www.example.com/'); return false;">Example</a>
+        <!--href = "#"  此处的#只是创建了一个空链接（即未指向任何目标的内部链接），有的浏览器把它当做指向当前文档的开头，但在此处是创建了空链接，真正起作用的是popUp函数-->
+        <!--若禁用了js或不支持js的浏览器都不能使用这个链接，所以并没有平稳退化-->
+
+        <!--平稳退化，搜索引擎机器人大多数不能理解js代码，所以需要平稳退化来让自己的网站在搜索引擎上的排名靠前,以下是正确做法-->
+        <a href = "http://www.example.com/" onclick = "popUp('http://www.example.com/'); return false;">Example</a>
+        <!--现在href属性有了合法的值，不同于#，这样即使浏览器不支持js（即 不能通过onclick调用popUp函数）也可以使用a元素来打开http://www.example.com/-->
+        
+        <!--用this属性进行优化-->
+        <a href = "http://www.example.com/" onclick = "popUp(this.getAttribute('href')); return false;">Example</a>
+        <!--进一步……-->
+        <a href = "http://www.example.com/" onclick = "popUp(this.href); return false;">Example</a>
+        <!--完美！只剩下让js与html分离了-->
+        <script src = "domjs/index.js"></script>
+    </body>
+</html>
