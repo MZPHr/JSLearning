@@ -1,0 +1,38 @@
+<!--结构（HTML）与行为（JavaScript）分离程度越大越好-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Image Gallery</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <h1>图片库</h1>
+        <ul id = "imagegallery">    <!--也可以给每条a标签都添加类，但是也可以给ul元素添加id，这样更高效(a标签都包含在ul里)-->
+            <li>
+                <!--替换为缩略图（即图片链接）-->
+                <a href="images/1.jpg" onclick = "showPic(this); return false;" title = "pic1" >
+                    <img src="images/thumbnail_1.jpg" alt="Pic1">
+                </a>
+            </li>
+            <li>
+                <a href="images/2.jpg" onclick = "showPic(this); return false;" title = "pic2" >
+                    <img src="images/thumbnail_2.jpg" alt="Pic2">
+                </a>
+            </li>
+            <li>
+                <a href="images/3.jpg" onclick = "showPic(this); return false;" title = "pic3" >
+                    <img src="images/thumbnail_3.jpg" alt="Pic3">
+                </a>
+            </li>
+            <li>
+                <a href="images/4.jpg" onclick = "showPic(this); return false;" title = "pic4" >
+                    <img src="images/thumbnail_4.jpg" alt="Pic4">
+                </a>
+            </li>
+        </ul>
+        <img id = "picture" src="images/picture.jpg" alt="my image gallery">
+        <p id = "description">Choose an image (0__ 0 !)</p>
+        <script src = "js/showPic.js"></script>
+    </body>
+</html>

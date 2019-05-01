@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Image Gallery</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <h1>图片库</h1>
+        <ul id = "imagegallery">    <!--也可以给每条a标签都添加类，但是也可以给ul元素添加id，这样更高效(a标签都包含在ul里)-->
+            <li>
+                <a href="images/1.jpg" onclick = "showPic(this); return false;" title = "pic1" >Picture_1</a>
+            </li>
+            <li>
+                <a href="images/2.jpg" onclick = "showPic(this); return false;" title = "pic2" >Picture_2</a>
+            </li>
+            <li>
+                <a href="images/3.jpg" onclick = "showPic(this); return false;" title = "pic3" >Picture_3</a>    
+            </li>
+            <li>
+                <a href="images/4.jpg" onclick = "showPic(this); return false;" title = "pic4" >Picture_4</a>
+            </li>
+        </ul>
+        <img id = "picture" src="" alt="my image gallery">
+        <p id = "description">Choose an image (0__ 0 !)</p>
+        <script src = "js/showPic.js"></script>
+    </body>
+</html>
